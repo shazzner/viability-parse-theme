@@ -23,7 +23,7 @@ class Viability_Parse_Theme {
 
         $this->theme_list = array_keys( wp_get_themes( array( 'errors' => false, 'allowed' => null ) ) );
 
-        $this->refresh = false;
+        $this->refresh = true;
     }
 
     // This checks if ?theme=<theme stylesheet> is in the url
@@ -42,7 +42,7 @@ class Viability_Parse_Theme {
                     // Works but looks bad. Don't think it'll be an issue
                     // when working with all the same framework.
                     if ( $this->refresh ) {
-                        echo '<META HTTP-EQUIV="REFRESH" CONTENT="1">' ;
+                        echo '<META HTTP-EQUIV="REFRESH" CONTENT="0">' ;
                     }
                 }
             }
